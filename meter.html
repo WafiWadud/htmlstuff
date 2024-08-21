@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="meter.css" />
+  </head>
+  <body>
+    <progress min="0" max="100"></progress>
+    <abbr title="HyperText Markup Language">HTML</abbr>
+    <br />
+    <meter min="0" max="100" low="0" high="40" optimum="80" id="meter"></meter>
+    <button onclick="document.getElementById('meter').value += 1">
+      Add One
+    </button>
+    <br />
+    <fieldset>
+      <legend>Lorem Ipsum</legend>
+      <p>Lorem ipsum dolor sit amet</p>
+    </fieldset>
+
+    <button onclick="document.getElementById('dialog').showModal()">
+      Click me!
+    </button>
+    <dialog id="dialog">
+      Hello!
+      <button
+        onclick="document.getElementById('dialog').close()"
+        style="position: absolute; top: 0px; right: 0px"
+      >
+        x
+      </button>
+    </dialog>
+    <input type="input" list="colors" />
+    <datalist id="colors">
+      <option value="red"></option>
+      <option value="green"></option>
+      <option value="blue"></option>
+    </datalist>
+    <time>18:56</time>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+      <input tyape="number" id="a" value="0" /> +
+      <input type="number" id="b" value="0" />
+      = <output name="result" for="a b">0</output>
+    </form>
+    <search>
+      <form>
+        <input name="fsrch" id="fsrch" placeholder="Search W3Schools" />
+      </form>
+    </search>
+    <p>This is some <u>mispeled</u> text.</p>
+    <p>
+      The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where
+      <var>b</var> is the base, and <var>h</var> is the vertical height.
+    </p>
+  </body>
+</html>
