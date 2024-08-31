@@ -25,7 +25,16 @@
         font-size: 2.5rem;
       }
 
+      nav ul {
+        display: flex;
+        list-style-type: none;
+        gap: 1rem;
+      }
+
       .theme-switch-wrapper {
+        position: fixed;
+        top: 0px;
+        right: 0px;
         display: flex;
         align-items: center;
       }
@@ -128,16 +137,22 @@
 
   <body>
     <main></main>
-    <div class="container mt-5">
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="theme-switch">
-          <input type="checkbox" id="theme-switch" />
-          <div class="slider">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
+    <nav>
+      <ul>
+        <li>
+          <div class="container mt-5">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="theme-switch">
+                <input type="checkbox" id="theme-switch" />
+                <div class="slider">
+                  <i class="fas fa-sun"></i>
+                  <i class="fas fa-moon"></i>
+                </div>
+              </label>
+            </div>
           </div>
-        </label>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </nav>
   </body>
 </html>
