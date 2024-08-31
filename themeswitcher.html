@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Theme Switcher</title>
     <link
       id="theme-css"
@@ -14,6 +12,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap");
+      main {
+        font-family: "Playwrite US Modern", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
       .theme-switch-wrapper {
         display: flex;
         align-items: center;
@@ -65,7 +76,7 @@
       .slider .fa-sun {
         color: #f39c12;
         position: absolute;
-        left: 14%;
+        left: 15%;
         top: 8px;
         transition: 0.4s;
       }
@@ -93,20 +104,6 @@
           color 0.3s ease;
       }
     </style>
-  </head>
-  <body>
-    <div class="container mt-5">
-      <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="theme-switch">
-          <input type="checkbox" id="theme-switch" />
-          <div class="slider">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
-          </div>
-        </label>
-      </div>
-    </div>
-
     <script>
       const themeSwitch = document.getElementById("theme-switch");
       const themeCSS = document.getElementById("theme-css");
@@ -127,5 +124,20 @@
         }
       });
     </script>
+  </head>
+
+  <body>
+    <main></main>
+    <div class="container mt-5">
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-switch">
+          <input type="checkbox" id="theme-switch" />
+          <div class="slider">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </div>
+        </label>
+      </div>
+    </div>
   </body>
 </html>
