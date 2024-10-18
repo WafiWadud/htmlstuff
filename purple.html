@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purple Dreams</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #2e004d;
+        color: white;
+        line-height: 1.6;
+      }
+
+      .navbar {
+        background: #4a0080;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        justify-content: center;
+      }
+
+      .navbar a {
+        color: #c7a3ff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .navbar a:hover {
+        color: #00ffcc;
+      }
+
+      section {
+        padding: 5rem 2rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #home {
+        background: linear-gradient(135deg, #7f00ff, #9d00ff, #6e00b3);
+        padding-top: 7rem;
+      }
+
+      .hero-content {
+        text-align: center;
+        max-width: 800px;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #b980ff;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        color: #e6e6fa;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #00ffcc;
+        color: #2e004d;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      #features {
+        background: #3d0066;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+      }
+
+      .feature-card {
+        background: #4a0080;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-card h3 {
+        color: #b980ff;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card p {
+        color: #c7a3ff;
+      }
+
+      #about {
+        background: #4a0080;
+      }
+
+      .about-content {
+        max-width: 800px;
+        text-align: center;
+      }
+
+      .about-content p {
+        margin-bottom: 1.5rem;
+        color: #c7a3ff;
+      }
+
+      #contact {
+        background: #2e004d;
+      }
+
+      .contact-form {
+        background: #4a0080;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #c7a3ff;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #6e00b3;
+        background: #3d0066;
+        color: white;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: #00ffcc;
+      }
+
+      footer {
+        background: #2e004d;
+        padding: 2rem;
+        text-align: center;
+        color: #c7a3ff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="hero-content">
+        <h1>Purple Dreams</h1>
+        <p class="subtitle">
+          Transform your digital presence with our stunning purple-themed
+          designs
+        </p>
+        <a href="#contact" class="cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Modern Design</h3>
+          <p>
+            Clean, contemporary layouts that capture attention and engage users
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Responsive</h3>
+          <p>
+            Perfect display on all devices, from mobile phones to desktop
+            screens
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Fast Loading</h3>
+          <p>Optimized performance for the best user experience</p>
+        </div>
+        <div class="feature-card">
+          <h3>SEO Friendly</h3>
+          <p>Built with best practices to help your site rank better</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          Purple Dreams is a creative studio specializing in unique,
+          purple-themed web experiences. Our passion for design and attention to
+          detail sets us apart from the competition.
+        </p>
+        <p>
+          Founded in 2024, we've helped numerous clients transform their online
+          presence with our distinctive style and modern approach to web design.
+        </p>
+        <p>
+          Our team of experts ensures that every project we undertake meets the
+          highest standards of quality and creativity.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-form">
+        <h2>Get In Touch</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Purple Dreams. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
