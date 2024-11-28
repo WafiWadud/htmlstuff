@@ -20,7 +20,7 @@
       Click me!
     </button>
     <dialog id="dialog">
-      Hello!
+      Hello! The transition was made using the @starting-style at-rule
       <button
         onclick="document.getElementById('dialog').close()"
         style="position: absolute; top: 0px; right: 0px"
@@ -50,5 +50,29 @@
       The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where
       <var>b</var> is the base, and <var>h</var> is the vertical height.
     </p>
+    <div class="centered">
+      Hello! I'm aligned to center using the align-content tag!
+    </div>
+    <div class="counter">Count: attr(--my-number)</div>
+    <label
+      >The verification css was made using the :user-valid :user-invalid psuedo
+      classes</label
+    >
+    <input
+      type="tel"
+      pattern="[0-9]{11}"
+      required
+      placeholder="Enter 11-digit phone"
+    />
+    <div class="dropdown">
+      <button onclick="this.parentElement.classList.toggle('open')">
+        Toggle Menu (Animation made using interpolate-size)
+      </button>
+      <div class="dropdown-content">
+        <p>Menu Item 1</p>
+        <p>Menu Item 2</p>
+        <p>Menu Item 3</p>
+      </div>
+    </div>
   </body>
 </html>

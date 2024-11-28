@@ -15,3 +15,73 @@ meter::-webkit-meter-even-less-good-value {
   background: linear-gradient(to bottom, #f44, #900);
   border-radius: 3px;
 }
+.centered {
+  display: block;
+  align-content: center;
+  background: light-dark(blue, rebeccapurple);
+}
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: true;
+}
+
+.counter {
+  counter-reset: num var(--num);
+  font-size: 2rem;
+  animation: counter 5s linear forwards;
+}
+
+.counter::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 10;
+  }
+}
+
+@starting-style {
+  dialog[open] {
+    translate: 0 100vh;
+  }
+}
+
+dialog[open] {
+  translate: 0 0;
+  transition:
+    translate 0.7s,
+    display 0.7s allow-discrete;
+}
+
+input:user-valid {
+  border: 2px solid green;
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
+
+.dropdown {
+  overflow: clip;
+  transition: height 0.3s;
+  transition-timing-function: interpolate-size;
+  transition-behavior: allow-discrete;
+}
+
+.dropdown-content {
+  background: white;
+  padding: 1rem;
+  height: 0;
+}
+
+.dropdown.open .dropdown-content {
+  height: auto;
+}
+:root {
+  interpolate-size: allow-keywords;
+}
